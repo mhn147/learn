@@ -1,0 +1,20 @@
+{
+  "name": "learning-npm",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "author": "Conan Doyle",
+  "license": "ISC",
+  "keywords": [],
+  "description": "",
+  "workspaces": [
+    "packages/ion-drive"
+  ],
+  "dependencies": {
+    "express": "^4.0.0",
+    "jshint": "^2.13.6",
+    "lodash": "^4.17.21"
+  }
+}
