@@ -3,7 +3,7 @@
 A regular language is a formal language that can be epxressed using a regular expression.
 A regular expression is a sequence of characters that define a search pattern.
 
-## Use Cases?
+### Use Cases?
 
 Searching/Validating/Replacing a complex string pattern.
 
@@ -19,8 +19,9 @@ Searching/Validating/Replacing a complex string pattern.
 * Too much complexity and not enough maintainability
 * Performance bottlenecks
 
+## Definitions
 
-## Metacharacter
+### Metacharacter
 
 A character that has a special meaning to a regular expression engine.
 
@@ -33,7 +34,7 @@ A set of metacharacters that specify how many instances of the previous element 
 | +             | 1 or many occurences of previous character |
 | ?             | 0 or 1 occurence of previous character     |
 
-## Character Class
+### Character Class
 
 A character class matches any one of a set of characters.
 
@@ -42,3 +43,12 @@ A character class matches any one of a set of characters.
 | \w            | Matches any word character |
 | \W            | Matches any non-word character |
 | \d            | Matches any decimal digit     |
+
+### Alternation Constructs
+
+Alternation constructs modify a regular expression to enabled either/or matching.
+
+| Construct | Description | Pattern | Matches | Mismatches |
+| --------- | --------- | --------- | --------- | --------- |
+| \| | Matches any one element separated by '\|' | "him\|her" | "him", "her" | "they", "them" | 
+| (?(expression)(yes\|no) | Matches *yes* if the regex designated by *expression* matches. Otherwise, matches the optional *no* part. The regex engine does not advance the input stream after it evaluates expression.  | "?((\wi\w)him\|her)" | "him", "her" | "they", "them" | 
