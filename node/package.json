@@ -1,0 +1,31 @@
+{
+  "name": "learn-node",
+  "version": "1.0.0",
+  "main": "src/index.js",
+  "scripts": {
+    "dev": "ts-node src/index.ts",
+    "start": "nodemon src/index.ts"
+  },
+  "keywords": [],
+  "author": "mnasri",
+  "license": "MIT",
+  "description": "",
+  "devDependencies": {
+    "@types/node": "^20.14.8",
+    "nodemon": "^3.1.4",
+    "prettier": "3.3.2",
+    "prisma": "^5.17.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.5.2"
+  },
+  "dependencies": {
+    "@prisma/client": "^5.17.0",
+    "bcrypt": "^5.1.1",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "express-validator": "^7.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "morgan": "^1.10.0"
+  }
+}
