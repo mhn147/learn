@@ -1,0 +1,80 @@
+@import "./styles/base.scss";
+
+:root {
+  --duration: 1s;
+  --easing: cubic-bezier(0.5, 0, 0.5, 1);
+  --bg-color: #111;
+  --color: #c3c1c1;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  padding: 5vmin;
+  background-color: var(--bg-color);
+  color: var(--color);
+}
+
+a {
+  color: var(--color);
+}
+
+h1 {
+  margin: 0;
+
+  &:hover {
+    font-size: 3rem;
+  }
+}
+
+small {
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+ul {
+  margin: 1rem 0;
+}
+
+.ball {
+  margin-top: 2rem;
+  height: 8vmin;
+  width: 8vmin;
+  left: 20vw;
+  border-radius: 50%;
+  background: radial-gradient(circle at bottom right, #fb2324, #fe932a);
+  background: #fb2324;
+
+  animation-name: move-like-a-square, red-to-green;
+  animation-duration: 2s;
+  animation-delay: 0s;
+  animation-fill-mode: both;
+  animation-iteration-count: 5;
+}
+
+@keyframes move-like-a-square {
+  from,
+  to {
+    transform: none;
+  }
+
+  25% {
+    transform: translateX(20vw);
+  }
+
+  50% {
+    transform: translateX(20vw) translateY(20vh);
+  }
+
+  75% {
+    transform: translateX(0) translateY(20vh);
+  }
+}
+
+@keyframes red-to-green {
+  to {
+    background-color: red;
+  }
+  from {
+    background-color: green;
+  }
+}
